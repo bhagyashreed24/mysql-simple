@@ -12,6 +12,7 @@ In my Berksfile
 
 In environments/development.rb
 
+```json
   {
     "name": "development",
     "description": "The master development branch",
@@ -29,6 +30,7 @@ In environments/development.rb
       }
     }
   }
+```
 
 In my Vagrantfile
 
