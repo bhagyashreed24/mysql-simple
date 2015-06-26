@@ -10,7 +10,7 @@ In my Berksfile
     cookbook 'apt', git: 'git://github.com/opscode-cookbooks/apt.git'
     cookbook 'mysql-simple', git: 'git://github.com/christopher5106/mysql-simple.git'
 
-In environments/development.rb
+In environments/development.rb or in my OpsWorks Stack configuration :
 
 ```json
   {
