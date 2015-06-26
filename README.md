@@ -1,1 +1,3 @@
 #Simple Chef Cookbook for MySQL on Ubuntu 14.04
+
+Since there is no good MySQL cookbook...
