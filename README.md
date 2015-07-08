@@ -47,3 +47,5 @@ In my Vagrantfile
         chef.environment = "development"
       end
     end
+
+In Opsworks, add the recipe "mysql-simple" to a layer.
