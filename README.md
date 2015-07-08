@@ -68,5 +68,5 @@ In Opsworks,
 - create an app with name equals to the name of the app in the JSON.
 
 
-Launch you instance in Opsworks.
+Launch your instance in Opsworks.
 
