@@ -38,8 +38,7 @@ In my Vagrantfile
 
     Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       config.vm.box = "ubuntu/trusty64"
-      config.vm.network "forwarded_port", guest: 3000, host: 3000
-      config.vm.network "forwarded_port", guest: 9200, host: 9200
+      config.vm.network "forwarded_port", guest: 3306, host: 3306
       config.berkshelf.enabled = true;
       config.vm.provision :chef_solo do |chef|
         chef.cookbooks_path = "./"
