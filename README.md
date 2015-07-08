@@ -2,13 +2,16 @@
 
 Usage :
 
-In my Berksfile
+create your git repository with a Berksfile, a environments directory, and a Vagrantfile.
+
+
+In the Berksfile
 
     cookbook 'git'
     cookbook 'apt', git: 'git://github.com/opscode-cookbooks/apt.git'
     cookbook 'mysql-simple', git: 'git://github.com/christopher5106/mysql-simple.git'
 
-In environments/development.rb or in my OpsWorks Stack configuration :
+In environments/development.rb :
 
 ```json
   {
@@ -30,7 +33,7 @@ In environments/development.rb or in my OpsWorks Stack configuration :
   }
 ```
 
-In my Vagrantfile
+In the Vagrantfile
 
     VAGRANTFILE_API_VERSION = "2"
 
@@ -46,4 +49,24 @@ In my Vagrantfile
       end
     end
 
-In Opsworks, add the recipe "mysql-simple" to a layer.
+In Opsworks,
+
+- create a stack with your git repository, berkshelf enabled, and the json :
+
+```json
+{
+      "mysql":{
+        "server_root_password":"XXXXXXXXXXXXXX",
+        "datadir":"/var/lib/mysql",
+        "logdir":"/var/log/mysql"
+      }
+}
+```
+
+- create a layer and add the recipe "mysql-simple" to a layer
+
+- create an app with name equals to the name of the app in the JSON.
+
+
+Launch you instance in Opsworks.
+
